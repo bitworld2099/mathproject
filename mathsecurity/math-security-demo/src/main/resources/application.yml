@@ -1,0 +1,29 @@
+server:
+  port: 80
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/securitydb?useUnicode=yes&characterEncoding=UTF-8&useSSL=false
+    username: root
+    password:
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.MySQL5Dialect
+
+  session:
+    store-type: none
+security:
+  basic:
+    enabled: true
+
+#math:
+      #    security:
+      #     browser:
+  #      loginPage: /demo-signIn.html
+math:
+  security:
+    browser:
+      loginType: REDIRECT
